@@ -1,0 +1,24 @@
+{
+    "ndk_module_path" :[
+        "${COCOS_FRAMEWORKS}/cocos2d-x-3.6",
+        "${COCOS_FRAMEWORKS}/cocos2d-x-3.6/cocos/",
+        "${COCOS_FRAMEWORKS}/cocos2d-x-3.6/external",
+        "${COCOS_FRAMEWORKS}/cocos2d-x-3.6/cocos/scripting"
+    ],
+    "copy_resources": [
+        {
+            "from": "../../../src",
+            "to": "src"
+        },
+        {
+            "from": "../../../res",
+            "to": "res"
+        }
+    ],
+    "must_copy_resources": [
+        {
+            "from": "../../../config.json",
+            "to": ""
+        }
+    ]
+}

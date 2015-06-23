@@ -1,0 +1,11 @@
+<Solution>
+  <PropertyGroup Name="cocos_lua_lib" Version="2.2.9.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="HelloWorld.png" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
