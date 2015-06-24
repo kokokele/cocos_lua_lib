@@ -1,7 +1,5 @@
 --[[
-    说明: 基础视图基类
-    作者: 林国锋 <guofeng@9173.com>
-    日期: 2014-11-12
+    
 ]]
 
 local BaseView = class("BaseView", cc.Node)
@@ -154,23 +152,6 @@ function BaseView:OnClick(name, endedFunc, eventFunc)
     end
 end
 
-function BaseView:addEvent(name, listener)
-    self._events = self._events or {}
-    self._events[name] = qy.Event.add(name, listener)
-end
-
-function BaseView:removeEvent(name)
-    qy.Event.remove(self._events[name])
-    self._events[name] = nil
-end
-
-function BaseView:removeAllEvents()
-    if self._events then
-        for name, _ in pairs(self._events) do
-            self:removeEvent(name)
-        end
-    end
-end
 
 function BaseView:onEnter()
 end

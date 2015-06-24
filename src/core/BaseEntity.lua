@@ -91,6 +91,14 @@ function BaseEntity:setproperty(property)
                 if t.didSet then
                     t.didSet(t, oldvalue)
                 end
+
+                -- 触发观察者
+                if self._pool[t.mt.name] then
+                    for i, fun in ipairs(self._pool[t.mt.name]) do
+                        if type(fun) == "function" then fun(v) end
+                    end
+                end
+
             elseif k == "didSet" or k == "willSet" then
                 rawset(t, k, v)
             else
@@ -172,6 +180,39 @@ function BaseEntity:setproperty(property)
 
     -- 绑定
     self[property.mt.name .. "_"] = setmetatable(property, property.mt)
+end
+
+BaseEntity._pool = {}
+
+function BaseEntity:addObserver(name, fun)
+
+    assert(type(fun) == "function", "BaseEntity:addObserver(): 参数fun必须为function")
+    assert(self[name .. "_"], "BaseEntity:addObserver(): name=" .. name .. "不存在!")
+
+    if not self._pool[name] then
+        self._pool[name] = {}
+    end
+
+    table.insert(self._pool[name], fun)
+
+    return name .. "_" ..#self._pool[name]
+
+end
+
+function BaseEntity:removeObserver(handler)
+    local h = string.split(handler, "_")
+
+    if h[1] and h[2]  and tonumber(h[2]) then
+        if self._pool[h[1]]  then
+            table.remove(self._pool[h[1]], tonumber(h[2]))
+        end
+    end
+end
+
+function BaseEntity:clearObserver(name)
+    if self[name .. "_"] then
+        if self._pool[name] then self._pool[name] = {} end
+    end
 end
 
 --[[

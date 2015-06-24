@@ -31,10 +31,10 @@
       <ObjectData Name="Node" Tag="3" ctype="GameNodeObjectData">
         <Size />
         <Children>
-          <AbstractNodeData Name="Button_2" ActionTag="-679732542" Tag="6" IconVisible="False" LeftMargin="119.8000" RightMargin="-165.8000" TopMargin="-121.1000" BottomMargin="85.1000" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" OutlineSize="1" ShadowOffsetX="2" ShadowOffsetY="-2" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_1" ActionTag="-679732542" Tag="6" IconVisible="False" LeftMargin="145.0000" RightMargin="-191.0000" TopMargin="-137.5000" BottomMargin="101.5000" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" OutlineSize="1" ShadowOffsetX="2" ShadowOffsetY="-2" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="142.8000" Y="103.1000" />
+            <Position X="168.0000" Y="119.5000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

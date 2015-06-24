@@ -17,9 +17,7 @@ local App = class("App")
 
 
 function App:run()
-    -- dump(app)
-    print(app.p.scenes.LoginScene)
-    app:replaceScene(app.p.scenes.LoginScene.new())
+    app.replaceScene(app.scenes.LoginScene.new())
 end
 
 return App
