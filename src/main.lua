@@ -15,6 +15,8 @@ function __G__TRACKBACK__(msg)
 end
 
 local function start()
+
+    require("core.BaseApp")
 	require("app").new():run()
 end
 
