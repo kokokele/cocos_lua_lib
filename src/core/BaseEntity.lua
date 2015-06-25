@@ -1,11 +1,8 @@
 --[[
-    说明: 基础实体类
-    作者: 林国锋 <guofeng@9173.com>
-    日期: 2014-12-03
-
+  
     usage:
 
-        local Hero = class("Hero", qy.Entity.Base)
+        local Hero = class("Hero", app.D)
 
         function Hero:ctor()
             self:setproperty({"level", 10, didSet = function(level)
@@ -16,7 +13,7 @@
         end
 ]]
 
-local BaseEntity = class("BaseEntity")
+local BaseEntity = class("BaseEntity", require("core.Singal"))
 
 --[[
     增加一个属性, 每个属性都是一个表, 具有名字与值, 还有get/set/willSet/didSet函数
@@ -93,11 +90,7 @@ function BaseEntity:setproperty(property)
                 end
 
                 -- 触发观察者
-                if self._pool[t.mt.name] then
-                    for i, fun in ipairs(self._pool[t.mt.name]) do
-                        if type(fun) == "function" then fun(v) end
-                    end
-                end
+               self:fire(t.mt.name, v)
 
             elseif k == "didSet" or k == "willSet" then
                 rawset(t, k, v)
@@ -182,38 +175,6 @@ function BaseEntity:setproperty(property)
     self[property.mt.name .. "_"] = setmetatable(property, property.mt)
 end
 
-BaseEntity._pool = {}
-
-function BaseEntity:addObserver(name, fun)
-
-    assert(type(fun) == "function", "BaseEntity:addObserver(): 参数fun必须为function")
-    assert(self[name .. "_"], "BaseEntity:addObserver(): name=" .. name .. "不存在!")
-
-    if not self._pool[name] then
-        self._pool[name] = {}
-    end
-
-    table.insert(self._pool[name], fun)
-
-    return name .. "_" ..#self._pool[name]
-
-end
-
-function BaseEntity:removeObserver(handler)
-    local h = string.split(handler, "_")
-
-    if h[1] and h[2]  and tonumber(h[2]) then
-        if self._pool[h[1]]  then
-            table.remove(self._pool[h[1]], tonumber(h[2]))
-        end
-    end
-end
-
-function BaseEntity:clearObserver(name)
-    if self[name .. "_"] then
-        if self._pool[name] then self._pool[name] = {} end
-    end
-end
 
 --[[
     判断name属性在不在, 存在并返回

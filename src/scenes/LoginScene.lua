@@ -26,7 +26,7 @@ function LoginScene:ctor()
 
 
     local vo = app.entitys.TestVO
-    vo.id_:set(123)
+    --vo.id_:set(123)
 
     local l1 = vo:addObserver("id", function(id)
         print("my_id:", id)
@@ -34,7 +34,7 @@ function LoginScene:ctor()
 
     print(l1)
 
-    vo:removeObserver(l1)
+    --vo:removeObserver(l1)
 
     vo.id_:set(456)
 

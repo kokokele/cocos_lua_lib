@@ -53,6 +53,7 @@ app = {}
 
 function app.ctor()
     -- app.runningScene = nil
+    app.S = require("core.Singal")
 
     app.V = require("core.BaseView")
     app.C = require("core.BaseController")

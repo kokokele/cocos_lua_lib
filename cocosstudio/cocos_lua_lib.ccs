@@ -1,5 +1,5 @@
 <Solution>
-  <PropertyGroup Name="cocos_lua_lib" Version="2.2.9.0" Type="CocosStudio" />
+  <PropertyGroup Name="cocos_lua_lib" Version="2.3.0.1" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
