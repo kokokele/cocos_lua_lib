@@ -13,7 +13,7 @@
         end
 ]]
 
-local BaseEntity = class("BaseEntity", require("core.Singal"))
+local BaseEntity = class("BaseEntity", require("core.Observer"))
 
 --[[
     增加一个属性, 每个属性都是一个表, 具有名字与值, 还有get/set/willSet/didSet函数

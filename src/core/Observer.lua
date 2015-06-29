@@ -4,15 +4,15 @@ zp
 
 ]]
 
-local Singal = class("Signal")
+local Observer = class("Observer")
 
 
-Singal._pool = {}
+Observer._pool = {}
 
-function Singal:addObserver(name, fun)
+function Observer:addObserver(name, fun)
 
     assert(type(fun) == "function", "BaseEntity:addObserver(): 参数fun必须为function")
-    assert(self[name .. "_"], "BaseEntity:addObserver(): name=" .. name .. "不存在!")
+    -- assert(self[name .. "_"], "BaseEntity:addObserver(): name=" .. name .. "不存在!")
 
     if not self._pool[name] then
         self._pool[name] = {}
@@ -24,7 +24,7 @@ function Singal:addObserver(name, fun)
 
 end
 
-function Singal:fire(name, ...)
+function Observer:fire(name, ...)
      if self._pool[name] then
         for i, fun in ipairs(self._pool[name]) do
             if type(fun) == "function" then fun(...) end
@@ -32,7 +32,7 @@ function Singal:fire(name, ...)
     end
 end
 
-function Singal:removeObserver(handler)
+function Observer:removeObserver(handler)
     local h = string.split(handler, "_")
 
     if h[1] and h[2]  and tonumber(h[2]) then
@@ -42,10 +42,10 @@ function Singal:removeObserver(handler)
     end
 end
 
-function Singal:clearObserver(name)
+function Observer:clearObserver(name)
     if self[name .. "_"] then
         if self._pool[name] then self._pool[name] = {} end
     end
 end
 
-return Singal
+return Observer

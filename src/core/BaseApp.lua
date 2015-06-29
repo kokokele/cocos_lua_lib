@@ -4,9 +4,9 @@
 --
 
 
-local function registerClass(o) 
-    
-    function recursion(_o) 
+local function registerClass(o)
+
+    function recursion(_o)
         setmetatable(_o, {
             __index = function(t, k)
                 local path = rawget(t,"__path")
@@ -53,7 +53,7 @@ app = {}
 
 function app.ctor()
     -- app.runningScene = nil
-    app.S = require("core.Singal")
+    app.S = require("core.Signal")
 
     app.V = require("core.BaseView")
     app.C = require("core.BaseController")

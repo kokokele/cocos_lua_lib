@@ -13,7 +13,7 @@ function LoginScene:ctor()
     end
 
     local v = view.new()
-    
+
     v:addCSB("LoginSceneSkin")
 
     v:InjectView("Button_1", "btn")
@@ -26,19 +26,41 @@ function LoginScene:ctor()
 
 
     local vo = app.entitys.TestVO
-    --vo.id_:set(123)
+    vo.testSignal:add(function(param)
+      print("param:", param)
+    end)
 
-    local l1 = vo:addObserver("id", function(id)
-        print("my_id:", id)
-        end)
 
-    print(l1)
+    vo:fireSignal()
 
-    --vo:removeObserver(l1)
+    vo.testSignal:addOnce(function(param)
+      print("once_param:", param)
+    end)
 
-    vo.id_:set(456)
 
-    vo.id_:set(789)
+    vo:fireSignal()
+
+    vo:fireSignal()
+
+
+
+
+
+    -- --vo.id_:set(123)
+    --
+    -- local l1 = vo:addObserver("id", function(id)
+    --     print("my_id:", id)
+    --     end)
+    --
+    -- print(l1)
+    --
+    -- --vo:removeObserver(l1)
+    --
+    -- vo.id_:set(456)
+    --
+    -- vo.id_:set(789)
+
+
 
 end
 
