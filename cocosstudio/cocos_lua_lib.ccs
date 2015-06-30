@@ -3,11 +3,62 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="assets" />
+        <Folder Name="assets">
+          <Folder Name="bg">
+            <Image Name="bg_1.png" />
+            <Image Name="bg_2.png" />
+            <Image Name="bg_3.png" />
+            <Image Name="bg_4.png" />
+            <Image Name="bg_5.png" />
+            <Image Name="bg_6.png" />
+            <Image Name="Bk_1.png" />
+            <Image Name="Bk_2.png" />
+            <Image Name="Zhujm_35.png" />
+          </Folder>
+          <Folder Name="button">
+            <Image Name="add.png" />
+            <Image Name="add_down.png" />
+            <Image Name="add_normal.png" />
+            <Image Name="back_down.png" />
+            <Image Name="back_normal.png" />
+            <Image Name="button_normal.png" />
+            <Image Name="button_press.png" />
+            <Image Name="button_u.png" />
+            <Image Name="charage_down.png" />
+            <Image Name="charage_normal.png" />
+            <Image Name="close_normal.png" />
+            <Image Name="des_down.png" />
+            <Image Name="des_normal.png" />
+            <Image Name="Liaot_4.png" />
+            <Image Name="Liaot_6.png" />
+            <Image Name="tab_normal.png" />
+            <Image Name="tab_selected.png" />
+          </Folder>
+          <Folder Name="icon">
+            <Image Name="clock.png" />
+            <Image Name="gold.png" />
+            <Image Name="search.png" />
+            <Image Name="silver.png" />
+            <Image Name="star_disable.png" />
+            <Image Name="star_normal.png" />
+          </Folder>
+          <Folder Name="line">
+            <Image Name="line1.jpg" />
+          </Folder>
+          <Folder Name="figure">
+            <Image Name="icon1.jpg" />
+            <Image Name="Zs_1.png" />
+            <Image Name="Zs_2.png" />
+            <Image Name="Zs_3.png" />
+          </Folder>
+        </Folder>
         <Folder Name="csd">
           <Project Name="LoginSceneSkin.csd" Type="Node" />
           <Project Name="MainLayer.csd" Type="Layer" />
           <Folder Name="theme_default">
+            <Project Name="PopupSkin.csd" Type="Node" />
+          </Folder>
+          <Folder Name="theme_1">
             <Project Name="PopupSkin.csd" Type="Node" />
           </Folder>
         </Folder>

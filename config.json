@@ -1,10 +1,10 @@
 {
     "init_cfg":{
-       "isLandscape": true,
+       "isLandscape": false,
        "isWindowTop": false,
        "name": "cocos_lua_lib",
-       "width": 960,
-       "height": 640,
+       "width": 640,
+       "height": 960,
        "entry": "src/main.lua",
        "consolePort": 6050,
        "uploadPort": 6060
@@ -12,48 +12,48 @@
     "simulator_screen_size": [
         {
             "title": "iPhone 3Gs (480x320)",
-            "width": 480,
-            "height": 320
+            "width": 320,
+            "height": 480
         },
         {
             "title": "iPhone 4 (960x640)",
-            "width": 960,
-            "height": 640
+            "width": 640,
+            "height": 960
         },
         {
             "title": "iPhone 5 (1136x640)",
-            "width": 1136,
-            "height": 640
+            "width": 640,
+            "height": 1136
         },
         {
             "title": "iPad (1024x768)",
-            "width": 1024,
-            "height": 768
+            "width": 768,
+            "height": 1024
         },
         {
             "title": "iPad Retina (2048x1536)",
-            "width": 2048,
-            "height": 1536
+            "width": 1536,
+            "height": 2048
         },
         {
             "title": "Android (800x480)",
-            "width": 800,
-            "height": 480
+            "width": 400,
+            "height": 800
         },
         {
             "title": "Android (854x480)",
-            "width": 854,
-            "height": 480
+            "width": 480,
+            "height": 854
         },
         {
             "title": "Android (1280x720)",
-            "width": 1280,
-            "height": 720
+            "width": 720,
+            "height": 1280
         },
         {
             "title": "Android (1920x1080)",
-            "width": 1920,
-            "height": 1080
+            "width": 1080,
+            "height": 1920
         }
     ]
 }

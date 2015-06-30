@@ -13,7 +13,7 @@
 		<key>87684411BA6696D5196173922956B2FA74F60149</key>
 		<string>https://github.com/kokokele/cocos_lua_lib.git</string>
 		<key>BC3652298C763DEDDC57941E4D5E5C993C7DE949</key>
-		<string>https://git.oschina.net/kokokele/newGods.git</string>
+		<string>git.oschina.net:kokokele/newGods.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>frameworks/runtime-src/proj.ios_mac/cocos_lua_lib.xcodeproj</string>
@@ -22,7 +22,7 @@
 		<key>87684411BA6696D5196173922956B2FA74F60149</key>
 		<string>../../../../..</string>
 		<key>BC3652298C763DEDDC57941E4D5E5C993C7DE949</key>
-		<string>../../../../../codes/</string>
+		<string>../../../../..codes/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kokokele/cocos_lua_lib.git</string>
