@@ -59,6 +59,7 @@ function app.ctor()
 
     app.runningScene = nil
 
+    app.Toast = require("widgets.Toast")
     app.Timer = require("utils.timer")
     app.Event = require("utils.event")
     app.Http = require("utils.http")

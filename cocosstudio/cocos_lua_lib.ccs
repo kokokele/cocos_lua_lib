@@ -60,6 +60,7 @@
           </Folder>
           <Folder Name="theme_1">
             <Project Name="PopupSkin.csd" Type="Node" />
+            <Project Name="ToastSkin.csd" Type="Node" />
           </Folder>
         </Folder>
       </RootFolder>
