@@ -44,7 +44,7 @@ Bg:ignoreContentAdaptWithSize(false)
 Bg:setBackGroundImage("assets/bg/bg_4.png",0)
 
 Bg:setClippingEnabled(false)
-Bg:setBackGroundImageCapInsets(cc.rect(10,10,366,306))
+Bg:setBackGroundImageCapInsets(cc.rect(40,40,306,246))
 Bg:setBackGroundColor(cc.c3b(150, 200, 255))
 Bg:setBackGroundColor(cc.c3b(150, 200, 255),cc.c3b(255, 255, 255))
 Bg:setBackGroundColorVector(cc.p(0,1))

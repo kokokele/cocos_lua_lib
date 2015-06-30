@@ -34,18 +34,16 @@ function BasePopup:ctor()
 
     --  根据相对位置调整close位置
     if self.close then
-        local xs = self.close:getPositionX() / self.Bg:getContentSize().width
-        local ys = self.close:getPositionY() / self.Bg:getContentSize().height
 
-        self.close:move(xs * (w + gap * 2) + cx, ys *  (h + gap * 2) + cy)
+        local xoffset = (w - self.Bg:getContentSize().width)
+        local yoffset = (h - self.Bg:getContentSize().height)
+
+        self.close:move(self.close:getPositionX() + xoffset +  cx, self.close:getPositionY() + yoffset + cy)
 
         self:OnClick("Button_Close", function()
             self:dismiss()
         end)
     end
-
-
-
 
     self.skin = self:addCSB(self.style.skin, self.Bg)
 
@@ -74,9 +72,6 @@ function BasePopup:show()
 
 
     self:showAction()
-
-
-
 end
 
 function BasePopup:showAction()
