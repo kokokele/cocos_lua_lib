@@ -6,7 +6,7 @@ DEBUG = 2
 CC_USE_FRAMEWORK = true
 
 -- show FPS on screen
-CC_SHOW_FPS = true
+CC_SHOW_FPS = false
 
 -- disable create unexpected global variable
 CC_DISABLE_GLOBAL = false
@@ -25,20 +25,22 @@ CC_DESIGN_RESOLUTION = {
     end
 }
 
--- 是否启用内更新
-local app = cc.Application:getInstance()
-local target = app:getTargetPlatform()
-if target == 2 then -- Mac平台模拟器不使用内更新
-    QY_IS_USE_UPDATE = false
-else
-    QY_IS_USE_UPDATE = true
+-- 注册一个全局的qy表, 存储所有的对象
+app = {}
 
-    QY_SDK = "default"
-    -- QY_SDK = "haima"
+app.config = {
+    -- 是否是debug模式
+    DEBUG = true,
+    -- 手动新手开关
+    IS_NEW = true,
+    IS_NEW_EXTEND = true,
 
-    if QY_SDK == "haima" then
-        QY_MANIFEST_FILE = "haima.manifest"
-    else
-        QY_MANIFEST_FILE = "heroes.manifest"
-    end
-end
+    Theme = "theme_default",
+
+    -- 服务器信息配置
+    SERVER_SCHEME = "http",
+    SERVER_PORT = "80",
+
+
+    SERVER_PATH = "vms/index.php?mod=api",
+}

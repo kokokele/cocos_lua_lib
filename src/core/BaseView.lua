@@ -10,7 +10,7 @@ function BaseView:ctor()
     self:enableNodeEvents()
 end
 
-function BaseView:addCSB(csbFile)
+function BaseView:addCSB(csbFile, parent)
     --local result =  require("csd." .. csbFile).create()
     --local timeline = result["animation"]
 
@@ -32,7 +32,8 @@ function BaseView:addCSB(csbFile)
     node:setCascadeColorEnabled(true)
     node:setCascadeOpacityEnabled(true)
 
-    self:add(node)
+    if parent then parent:add(node)
+    else self:add(node) end
 
     return node
 end

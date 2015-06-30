@@ -7,11 +7,6 @@ local LoginScene = class("LoginScene", app.scenes.BaseScene)
 function LoginScene:ctor()
     LoginScene.super.ctor(self)
 
-
-    local view = app.main.MainV.new()
-    self:add(view)
-
-
     -- local view = class("view1", app.V)
     -- function view:ctor()
     -- 	view.super.ctor(self)
@@ -68,6 +63,15 @@ function LoginScene:ctor()
     -- vo.id_:set(789)
 
 
+
+end
+
+
+function LoginScene:onEnter()
+    LoginScene.super.onEnter(self)
+
+    local view = app.main.MainV.new()
+    self:add(view)
 
 end
 

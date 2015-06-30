@@ -7,6 +7,9 @@
         <Folder Name="csd">
           <Project Name="LoginSceneSkin.csd" Type="Node" />
           <Project Name="MainLayer.csd" Type="Layer" />
+          <Folder Name="theme_default">
+            <Project Name="PopupSkin.csd" Type="Node" />
+          </Folder>
         </Folder>
       </RootFolder>
     </Group>

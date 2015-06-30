@@ -6,21 +6,6 @@
       <ObjectData Name="Layer" Tag="30" ctype="GameLayerObjectData">
         <Size X="300.0000" Y="300.0000" />
         <Children>
-          <AbstractNodeData Name="Btn_close" ActionTag="547166932" Tag="31" IconVisible="False" LeftMargin="268.0000" RightMargin="-14.0000" TopMargin="-10.0000" BottomMargin="274.0000" TouchEnable="True" FontSize="14" ButtonText="X" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" OutlineSize="0" ShadowOffsetX="0" ShadowOffsetY="0" ctype="ButtonObjectData">
-            <Size X="46.0000" Y="36.0000" />
-            <AnchorPoint />
-            <Position X="268.0000" Y="274.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.8933" Y="0.9133" />
-            <PreSize />
-            <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
           <AbstractNodeData Name="CheckBox_1" ActionTag="-346164043" Tag="32" IconVisible="False" LeftMargin="126.0000" RightMargin="134.0000" TopMargin="49.5000" BottomMargin="210.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
             <Size X="40.0000" Y="40.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -105,6 +90,16 @@
             <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Image_1" ActionTag="-1146121169" Tag="41" IconVisible="False" ctype="ImageViewObjectData">
+            <Size X="300.0000" Y="300.0000" />
+            <AnchorPoint />
+            <Position />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="1.0000" Y="1.0000" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

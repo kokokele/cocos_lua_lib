@@ -18,7 +18,7 @@ local function registerClass(o)
                     else
                         className = k
                     end
-                     print(">>>>>>>>>>>>>>className:",className)
+                    --  print(">>>>>>>>>>>>>>className:",className)
                     t1 = require(className)
                     rawset(t, k, t1)
                 else
@@ -28,7 +28,7 @@ local function registerClass(o)
                     else
                         t1.__path = k
                     end
-                     print(">>>>>>>>>>>>>>path:",t1.__path)
+                    --  print(">>>>>>>>>>>>>>path:",t1.__path)
                     rawset(t, k, t1)
                     recursion(_o[k])
                 end
@@ -45,10 +45,6 @@ local function registerClass(o)
 end
 --------------------------------------------------------------------
 
--- 注册一个全局的qy表, 存储所有的对象
-app = {}
-
-
 -- local BaseApp = class("BaseApp")
 
 function app.ctor()
@@ -61,14 +57,14 @@ function app.ctor()
     app.D = require("core.BaseEntity")
     app.PP = require("core.BasePopup")
 
+    app.runningScene = nil
+
     app.Timer = require("utils.timer")
     app.Event = require("utils.event")
     app.Http = require("utils.http")
    	app.Date = require("utils.date")
     app.json = require("utils.dkjson")
     app.String = require("utils.String")
-
-    registerClass(app)
 
 end
 
@@ -79,10 +75,6 @@ end
 
 function app.popScene()
     cc.Director:getInstance():popScene()
-end
-
-function app.runningScene()
-	return cc.Director:getInstance():getRunningScene()
 end
 
 function app.pushScene(scene)
@@ -98,4 +90,5 @@ function app.replaceScene(scene)
 end
 
 app.ctor()
+registerClass(app)
 ------------------

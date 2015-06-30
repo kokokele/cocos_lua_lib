@@ -4,7 +4,7 @@
     日期: 2014-11-11
 ]]
 
-local ViewStack = class("ViewStack", qy.View.Base)
+local ViewStack = class("ViewStack", app.V)
 
 function ViewStack:ctor()
     ViewStack.super.ctor(self)
@@ -16,7 +16,7 @@ end
 function ViewStack:push(view, cleanup)
     if view then
         self:removeAllChildren(cleanup == nil and true or cleanup)
-    
+
         view:retain()
         table.insert(self._views, view)
         self:addChild(view)
