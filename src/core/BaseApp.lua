@@ -18,7 +18,7 @@ local function registerClass(o)
                     else
                         className = k
                     end
-                    -- print(">>>>>>>>>>>>>>className:",className)
+                     print(">>>>>>>>>>>>>>className:",className)
                     t1 = require(className)
                     rawset(t, k, t1)
                 else
@@ -28,7 +28,7 @@ local function registerClass(o)
                     else
                         t1.__path = k
                     end
-                    -- print(">>>>>>>>>>>>>>path:",t1.__path)
+                     print(">>>>>>>>>>>>>>path:",t1.__path)
                     rawset(t, k, t1)
                     recursion(_o[k])
                 end
@@ -59,6 +59,7 @@ function app.ctor()
     app.C = require("core.BaseController")
     app.M = require("core.BaseModel")
     app.D = require("core.BaseEntity")
+    app.PP = require("core.BasePopup")
 
     app.Timer = require("utils.timer")
     app.Event = require("utils.event")

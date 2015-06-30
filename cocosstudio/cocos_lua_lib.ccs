@@ -6,6 +6,7 @@
         <Folder Name="assets" />
         <Folder Name="csd">
           <Project Name="LoginSceneSkin.csd" Type="Node" />
+          <Project Name="MainLayer.csd" Type="Layer" />
         </Folder>
       </RootFolder>
     </Group>

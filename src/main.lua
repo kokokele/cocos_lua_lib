@@ -1,6 +1,8 @@
 cc.FileUtils:getInstance():setPopupNotify(false)
 cc.FileUtils:getInstance():addSearchPath("src")
+cc.FileUtils:getInstance():addSearchPath("codes")
 cc.FileUtils:getInstance():addSearchPath("res")
+
 
 qy = {}
 
@@ -27,12 +29,11 @@ local function main()
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
     math.randomseed(tostring(os.time()):reverse():sub(1, 6))
-    
+
     print = release_print
     -- initialize director
     local director = cc.Director:getInstance()
 
-    
     --turn on display FPS
     director:setDisplayStats(true)
 

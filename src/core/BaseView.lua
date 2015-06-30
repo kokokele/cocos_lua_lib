@@ -1,5 +1,5 @@
 --[[
-    
+
 ]]
 
 local BaseView = class("BaseView", cc.Node)
@@ -14,8 +14,7 @@ function BaseView:addCSB(csbFile)
     --local result =  require("csd." .. csbFile).create()
     --local timeline = result["animation"]
 
-   
-
+    local name = require "csd.MainLayer"
 
     local node = type(csbFile) == "string" and require("csd." .. csbFile).create()["root"] or cc.Node:create()
 
@@ -132,8 +131,8 @@ end
 function BaseView:OnClick(name, endedFunc, eventFunc)
     assert(endedFunc, "endedFunc 不能为空")
     assert(name, "name 不能为空")
-    
-    local view = type(name) ~= "string" and name or self[name] or self:findViewByName(name, true) 
+
+    local view = type(name) ~= "string" and name or self[name] or self:findViewByName(name, true)
     if view then
         if view.setZoomScale and view.setPressedActionEnabled then
             view:setZoomScale(0.05)

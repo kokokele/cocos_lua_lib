@@ -7,40 +7,47 @@ local LoginScene = class("LoginScene", app.scenes.BaseScene)
 function LoginScene:ctor()
     LoginScene.super.ctor(self)
 
-    local view = class("view1", app.V)
-    function view:ctor()
-    	view.super.ctor(self)
-    end
 
-    local v = view.new()
-
-    v:addCSB("LoginSceneSkin")
-
-    v:InjectView("Button_1", "btn")
-
-    v:OnClick("Button_1", function()
-    		print("Button_1")
-    	end)
-
-    self:addChild(v)
+    local view = app.main.MainV.new()
+    self:add(view)
 
 
-    local vo = app.entitys.TestVO
-    vo.testSignal:add(function(param)
-      print("param:", param)
-    end)
-
-
-    vo:fireSignal()
-
-    vo.testSignal:addOnce(function(param)
-      print("once_param:", param)
-    end)
-
-
-    vo:fireSignal()
-
-    vo:fireSignal()
+    -- local view = class("view1", app.V)
+    -- function view:ctor()
+    -- 	view.super.ctor(self)
+    -- end
+    --
+    -- local v = view.new()
+    --
+    -- v:addCSB("LoginSceneSkin")
+    --
+    -- v:InjectView("Button_1", "btn")
+    --
+    -- v:OnClick("Button_1", function()
+    -- 		print("Button_1")
+    -- 	end)
+    --
+    -- self:addChild(v)
+    --
+    --
+    -- local vo = app.entitys.TestVO
+    -- vo.testSignal:add(function(param)
+    --   print("param:", param)
+    -- end)
+    --
+    --
+    -- vo:fireSignal()
+    --
+    -- vo.testSignal:addOnce(function(param)
+    --   print("once_param:", param)
+    -- end)
+    --
+    -- local vo1 = app.entitys.TestVO
+    -- local vo2 = app.entitys.TestVO
+    --
+    -- vo:fireSignal()
+    --
+    -- vo:fireSignal()
 
 
 
