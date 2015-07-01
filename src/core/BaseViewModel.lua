@@ -13,7 +13,7 @@ function BaseViewModel:init()
 end
 
 -- 需要子类实现
-function BaseViewModel:clickHandler(sender, clickPos)
+function BaseViewModel:clickHandler(name)
     assert(false, "BaseViewModel:clickHandler需要子类实现")
 end
 

@@ -12,17 +12,15 @@ end
 function BaseView:initVM(ViewModelClass)
     self:enableNodeEvents()
     self.VM = ViewModelClass.new(self)
-    self:onCreate()
-
     self.VM:init()
 
     return self
 end
 
 -- 子类实现
-function BaseView:onCreate()
-
+function BaseView:init()
 end
+
 
 function BaseView:start()
     display:getRunningScene():push(self)
@@ -149,7 +147,9 @@ function BaseView:InjectCustomView(name, CustomView, ...)
 end
 
 function BaseView:click(name)
-    self:OnClick(name, self.VM.clickHandler)
+    self:OnClick(name, function()
+        self.VM:clickHandler(name)
+    end)
 end
 
 -- 给一个view注入一个点击的事件

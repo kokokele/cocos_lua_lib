@@ -40,6 +40,8 @@ app.config = {
     -- 服务器信息配置
     SERVER_SCHEME = "http",
     SERVER_PORT = "80",
+    SERVER_DOMAIN = '1.godsss.sinaapp.com'
+    SERVER_PATH = 'index.php'
 
 
     SERVER_PATH = "vms/index.php?mod=api",

@@ -65,7 +65,6 @@ function app.ctor()
     app.Http = require("utils.http")
    	app.Date = require("utils.date")
     app.json = require("utils.dkjson")
-    app.String = require("utils.String")
 
 end
 
