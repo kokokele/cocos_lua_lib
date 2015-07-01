@@ -93,7 +93,7 @@ Node:addChild(Node_bg)
 --Create Img_frame
 local Img_frame = ccui.ImageView:create()
 Img_frame:ignoreContentAdaptWithSize(false)
-Img_frame:loadTexture("assets/bg/bg_3.png",0)
+Img_frame:loadTexture("assets_lib/bg/bg_3.png",0)
 
 Img_frame:setFlippedX(false)
 Img_frame:setFlippedY(false)

@@ -3,7 +3,7 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="assets">
+        <Folder Name="assets_lib">
           <Folder Name="bg">
             <Image Name="bg_1.png" />
             <Image Name="bg_2.png" />

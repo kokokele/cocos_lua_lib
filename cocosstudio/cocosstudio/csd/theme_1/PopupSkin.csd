@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize />
-            <FileData Type="Normal" Path="assets/bg/bg_4.png" Plist="" />
+            <FileData Type="Normal" Path="assets_lib/bg/bg_4.png" Plist="" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
@@ -30,8 +30,8 @@
             <PreSize />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-            <PressedFileData Type="Normal" Path="assets/button/close_normal.png" Plist="" />
-            <NormalFileData Type="Normal" Path="assets/button/close_normal.png" Plist="" />
+            <PressedFileData Type="Normal" Path="assets_lib/button/close_normal.png" Plist="" />
+            <NormalFileData Type="Normal" Path="assets_lib/button/close_normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

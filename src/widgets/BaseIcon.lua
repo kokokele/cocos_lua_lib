@@ -13,6 +13,9 @@ BaseIcon.style = {
 function BaseIcon:ctor()
 
     self:addCSB(self.style.skin)
+
+    self:InjectView("icon")
+    self:InjectView("frame")
 end
 
 function BaseIcon:render(url, clickHandler)
@@ -32,14 +35,14 @@ function BaseIcon:render(url, clickHandler)
                 if not self._origin_scale then
                     self._origin_scale = self:getScale()
                 end
-                self:runAction(cc.ScaleTo:create(self.TOUCH_EFFECT_TIME, self._origin_scale * 1.05))
+                self:runAction(cc.ScaleTo:create(0.05, self._origin_scale * 1.05))
 
             elseif eventType == ccui.TouchEventType.moved then
             else
-                self:runAction(cc.ScaleTo:create(self.TOUCH_EFFECT_TIME, self._origin_scale))
+                self:runAction(cc.ScaleTo:create(0.05, self._origin_scale))
             end
         end
-        )--end 
+        )--end
     end
 
 end
