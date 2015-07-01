@@ -35,7 +35,9 @@ local function main()
     local director = cc.Director:getInstance()
 
     --turn on display FPS
-    director:setDisplayStats(true)
+    if CC_SHOW_FPS then
+        director:setDisplayStats(true)
+    end
 
     --set FPS. the default value is 1.0/60 if you don't call this
     director:setAnimationInterval(1.0 / 60)

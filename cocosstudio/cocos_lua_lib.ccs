@@ -51,6 +51,32 @@
             <Image Name="Zs_2.png" />
             <Image Name="Zs_3.png" />
           </Folder>
+          <Folder Name="frame">
+            <Image Name="card_1.png" />
+            <Image Name="card_2.png" />
+            <Image Name="card_3.png" />
+            <Image Name="card_4.png" />
+            <Image Name="card_5.png" />
+            <Image Name="f1_1.png" />
+            <Image Name="f1_2.png" />
+            <Image Name="f1_3.png" />
+            <Image Name="f1_4.png" />
+            <Image Name="f1_5.png" />
+            <Image Name="f_1.png" />
+            <Image Name="f_2.png" />
+            <Image Name="f_3.png" />
+            <Image Name="f_4.png" />
+            <Image Name="f_5.png" />
+            <Image Name="head_bg.png" />
+            <Image Name="highlight.png" />
+            <Image Name="ICON_11.png" />
+            <Image Name="ICON_12.png" />
+            <Image Name="ICON_13.png" />
+            <Image Name="ICON_14.png" />
+            <Image Name="ICON_15.png" />
+            <Image Name="ICON_21.png" />
+            <Image Name="ICON_22.png" />
+          </Folder>
         </Folder>
         <Folder Name="csd">
           <Project Name="LoginSceneSkin.csd" Type="Node" />
@@ -61,6 +87,7 @@
           <Folder Name="theme_1">
             <Project Name="PopupSkin.csd" Type="Node" />
             <Project Name="ToastSkin.csd" Type="Node" />
+            <Project Name="IconSkin.csd" Type="Node" />
           </Folder>
         </Folder>
       </RootFolder>
