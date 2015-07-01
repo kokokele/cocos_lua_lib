@@ -50,6 +50,15 @@
 		521A8E7119F0C3D200D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6F19F0C3D200D177D7 /* Default-736h@3x.png */; };
 		619258251B422EFA003003F0 /* codes in Resources */ = {isa = PBXBuildFile; fileRef = 619258241B422EFA003003F0 /* codes */; };
 		619258261B422EFA003003F0 /* codes in Resources */ = {isa = PBXBuildFile; fileRef = 619258241B422EFA003003F0 /* codes */; };
+		61A8E90B1B43FEB800B9CA05 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E90A1B43FEB800B9CA05 /* libTalkingData.a */; };
+		61A8E90C1B43FEB800B9CA05 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E90A1B43FEB800B9CA05 /* libTalkingData.a */; };
+		61A8E90F1B43FEF200B9CA05 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E90E1B43FEF200B9CA05 /* SystemConfiguration.framework */; };
+		61A8E9111B43FF0200B9CA05 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E9101B43FF0200B9CA05 /* CoreTelephony.framework */; };
+		61A8E9131B43FF1200B9CA05 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E9121B43FF1200B9CA05 /* AdSupport.framework */; };
+		61A8E9151B43FF2C00B9CA05 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E9141B43FF2C00B9CA05 /* Security.framework */; };
+		61A8E9171B43FF3C00B9CA05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A8E9161B43FF3C00B9CA05 /* StoreKit.framework */; };
+		61A8E91A1B43FFBA00B9CA05 /* Purchase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61A8E9191B43FFBA00B9CA05 /* Purchase.mm */; };
+		61A8E91B1B43FFBA00B9CA05 /* Purchase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61A8E9191B43FFBA00B9CA05 /* Purchase.mm */; };
 		78414941990C201EA42EE0AC /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49544A22B47E46D2D56B2786 /* libcocos2d iOS.a */; };
 		871D36221AF0AF6F00EC122C /* RuntimeLuaImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6C06B1A69863D00945236 /* RuntimeLuaImpl.cpp */; };
 		871D36231AF0AF7F00EC122C /* lua_debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6C0691A69863D00945236 /* lua_debugger.c */; };
@@ -129,6 +138,15 @@
 		521A8E6F19F0C3D200D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		5D8B419AB57B2A84011B4759 /* libsimulator Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsimulator Mac.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/mac/libsimulator Mac.a"; sourceTree = "<absolute>"; };
 		619258241B422EFA003003F0 /* codes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = codes; path = ../../../codes; sourceTree = "<group>"; };
+		61A8E90A1B43FEB800B9CA05 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
+		61A8E90D1B43FEC700B9CA05 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		61A8E90E1B43FEF200B9CA05 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		61A8E9101B43FF0200B9CA05 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		61A8E9121B43FF1200B9CA05 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		61A8E9141B43FF2C00B9CA05 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		61A8E9161B43FF3C00B9CA05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		61A8E9181B43FFBA00B9CA05 /* Purchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Purchase.h; path = ../Classes/Purchase.h; sourceTree = "<group>"; };
+		61A8E9191B43FFBA00B9CA05 /* Purchase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Purchase.mm; path = ../Classes/Purchase.mm; sourceTree = "<group>"; };
 		87EB60261A7271B60085F57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConsoleWindow.xib; sourceTree = "<group>"; };
 		87EB60281A7271C60085F57C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ConsoleWindow.strings"; sourceTree = "<group>"; };
 		9C144973908E80E9C400DB78 /* libsimulator iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsimulator iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/ios/libsimulator iOS.a"; sourceTree = "<absolute>"; };
@@ -179,6 +197,7 @@
 				50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */,
 				5023813717EBBCE400990C9B /* libz.dylib in Frameworks */,
 				5023813E17EBBCE400990C9B /* QuartzCore.framework in Frameworks */,
+				61A8E90C1B43FEB800B9CA05 /* libTalkingData.a in Frameworks */,
 				5023814017EBBCE400990C9B /* OpenAL.framework in Frameworks */,
 				5023814117EBBCE400990C9B /* AudioToolbox.framework in Frameworks */,
 				5023814417EBBCE400990C9B /* Foundation.framework in Frameworks */,
@@ -193,6 +212,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A8E9171B43FF3C00B9CA05 /* StoreKit.framework in Frameworks */,
+				61A8E9151B43FF2C00B9CA05 /* Security.framework in Frameworks */,
+				61A8E9131B43FF1200B9CA05 /* AdSupport.framework in Frameworks */,
+				61A8E9111B43FF0200B9CA05 /* CoreTelephony.framework in Frameworks */,
+				61A8E90F1B43FEF200B9CA05 /* SystemConfiguration.framework in Frameworks */,
 				5200BECA1A53D9A500AC45E4 /* Security.framework in Frameworks */,
 				3EEEDB61197107C0006A9FF8 /* MediaPlayer.framework in Frameworks */,
 				D6B061351803AC000077942B /* CoreMotion.framework in Frameworks */,
@@ -203,6 +227,7 @@
 				F293B3D115EB7BE500256477 /* OpenAL.framework in Frameworks */,
 				F293B3D315EB7BE500256477 /* AudioToolbox.framework in Frameworks */,
 				F293B3D515EB7BE500256477 /* AVFoundation.framework in Frameworks */,
+				61A8E90B1B43FEB800B9CA05 /* libTalkingData.a in Frameworks */,
 				F293B3D915EB7BE500256477 /* Foundation.framework in Frameworks */,
 				F293B3DB15EB7BE500256477 /* CoreGraphics.framework in Frameworks */,
 				78414941990C201EA42EE0AC /* libcocos2d iOS.a in Frameworks */,
@@ -310,6 +335,8 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				61A8E90D1B43FEC700B9CA05 /* TalkingData.h */,
+				61A8E90A1B43FEB800B9CA05 /* libTalkingData.a */,
 				5023810617EBBCAC00990C9B /* ios */,
 				5023817117EBBE3400990C9B /* mac */,
 				F293BB7C15EB830F00256477 /* Classes */,
@@ -333,6 +360,11 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61A8E9161B43FF3C00B9CA05 /* StoreKit.framework */,
+				61A8E9141B43FF2C00B9CA05 /* Security.framework */,
+				61A8E9121B43FF1200B9CA05 /* AdSupport.framework */,
+				61A8E9101B43FF0200B9CA05 /* CoreTelephony.framework */,
+				61A8E90E1B43FEF200B9CA05 /* SystemConfiguration.framework */,
 				DA9E7D871AB1ABCC004B27C8 /* Security.framework */,
 				5200BEC91A53D9A500AC45E4 /* Security.framework */,
 				3EEEDB60197107C0006A9FF8 /* MediaPlayer.framework */,
@@ -361,6 +393,8 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61A8E9181B43FFBA00B9CA05 /* Purchase.h */,
+				61A8E9191B43FFBA00B9CA05 /* Purchase.mm */,
 				9FC7603E1A67791200D1E6E7 /* ide-support */,
 				15427CE2198F237300DC375D /* lua_module_register.h */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
@@ -527,6 +561,7 @@
 				9FF504851A5E87B100AFDA55 /* ConsoleWindowController.m in Sources */,
 				C07828F818B4D72E00BD2287 /* main.m in Sources */,
 				9FB6C0701A69863D00945236 /* RuntimeLuaImpl.cpp in Sources */,
+				61A8E91B1B43FFBA00B9CA05 /* Purchase.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +573,7 @@
 				9FC760451A677A4A00D1E6E7 /* SimpleConfigParser.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
+				61A8E91A1B43FFBA00B9CA05 /* Purchase.mm in Sources */,
 				871D36221AF0AF6F00EC122C /* RuntimeLuaImpl.cpp in Sources */,
 				9FB6C06D1A69863D00945236 /* lua_debugger.h in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
@@ -599,7 +635,10 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.6/tools/simulator/libsimulator/lib/protobuf-lite",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/mac";
+				LIBRARY_SEARCH_PATHS = (
+					"/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/mac",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-image_base",
@@ -634,7 +673,10 @@
 					"/Applications/Cocos/frameworks/cocos2d-x-3.6/tools/simulator/libsimulator/lib/protobuf-lite",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/mac";
+				LIBRARY_SEARCH_PATHS = (
+					"/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/mac",
+					"$(PROJECT_DIR)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-image_base",
@@ -717,7 +759,10 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/ios";
+				LIBRARY_SEARCH_PATHS = (
+					"/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/ios",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -756,7 +801,10 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/ios";
+				LIBRARY_SEARCH_PATHS = (
+					"/Applications/Cocos/frameworks/cocos2d-x-3.6/prebuilt/ios",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",

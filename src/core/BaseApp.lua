@@ -50,21 +50,19 @@ end
 function app.ctor()
     -- app.runningScene = nil
     app.S = require("core.Signal")
+    app.D = require("core.BaseEntity")
 
     app.V = require("core.BaseView")
     app.VM = require("core.BaseViewModel")
     app.M = require("core.BaseModel")
-    app.D = require("core.BaseEntity")
     app.PP = require("core.BasePopup")
-
-    app.runningScene = nil
 
     app.Toast = require("widgets.Toast")
     app.Timer = require("utils.timer")
     app.Event = require("utils.event")
     app.Http = require("utils.http")
    	app.Date = require("utils.date")
-    app.json = require("utils.dkjson")
+    app.Json = require("utils.dkjson")
 
 end
 

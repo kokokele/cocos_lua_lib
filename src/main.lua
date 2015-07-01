@@ -3,9 +3,6 @@ cc.FileUtils:getInstance():addSearchPath("src")
 cc.FileUtils:getInstance():addSearchPath("codes")
 cc.FileUtils:getInstance():addSearchPath("res")
 
-
-qy = {}
-
 require "config"
 require "cocos.init"
 
@@ -31,6 +28,7 @@ local function main()
     math.randomseed(tostring(os.time()):reverse():sub(1, 6))
 
     print = release_print
+    print("logging")
     -- initialize director
     local director = cc.Director:getInstance()
 

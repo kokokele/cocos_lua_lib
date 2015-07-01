@@ -20,36 +20,30 @@ Http.POST = "POST"
 Http.Request = class("HttpRequest")
 Http.Response = class("HttpResponse")
 
-local MainScene = require("app.views.MainScene")
-local json = require("dkjson")
-
 function Http:ctor(request)
     self.request = request
 end
 
 function Http:send(callback, isHideLoading)
 
-    if qy.DEBUG then
+    if app.config.DEBUG then
         print("url: " .. self.request.url:toStr())
-        print("params: " .. json.encode(self.request.params))
+        print("params: " .. app.Json.encode(self.request.params))
     end
-
-    MainScene:showLoading()
 
     local xhr = cc.XMLHttpRequest:new()
 
     local function onReadyStateChange()
-        if qy.DEBUG then
+        if app.config.DEBUG then
             print("http response: ")
             print("status: ", xhr.status)
             print("返回数据： ", xhr.response)
         end
 
-        MainScene:hideLoading()
 
         if xhr.status == 200 then
 
-            local jdata = json.decode(xhr.response)
+            local jdata = app.Json.decode(xhr.response)
 
 
             -- 回调数据
@@ -58,7 +52,7 @@ function Http:send(callback, isHideLoading)
             end
 
         else
-            if qy.DEBUG then
+            if app.config.DEBUG then
                 print("responsecode: " .. xhr.status)
             end
         end
@@ -97,7 +91,7 @@ function Http.Request:URL()
 end
 
 function Http.Request:getParamsStr()
-    return self.method == Http.POST and json.encode(self.params) or nil
+    return self.method == Http.POST and app.Json.encode(self.params) or nil
 end
 
 -- data: 返回数据
