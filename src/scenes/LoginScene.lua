@@ -68,10 +68,10 @@ end
 
 
 function LoginScene:onEnter()
-    LoginScene.super.onEnter(self)
+    app.ViewCenter:appear("__Main")
 
-    local view = app.main.MainV.new()
-    self:add(view)
+    --local view = app.main.MainV.new()
+    -- self:add(view)
 
 end
 

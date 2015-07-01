@@ -5,10 +5,30 @@
 local BaseView = class("BaseView", cc.Node)
 
 function BaseView:ctor()
-
     --NodeEx.lua
-    self:enableNodeEvents()
+    --print("BaseView.ctor()")
 end
+
+function BaseView:initVM(ViewModelClass)
+    self:enableNodeEvents()
+    self.VM = ViewModelClass.new(self)
+    self:onCreate()
+
+    self.VM:init()
+
+    return self
+end
+
+-- 子类实现
+function BaseView:onCreate()
+
+end
+
+function BaseView:start()
+    display:getRunningScene():push(self)
+    return self
+end
+
 
 function BaseView:addCSB(csbFile, parent)
     --local result =  require("csd." .. csbFile).create()
@@ -126,6 +146,10 @@ function BaseView:InjectCustomView(name, CustomView, ...)
         -- 绑定
         self[name] = node
     end
+end
+
+function BaseView:click(name)
+    self:OnClick(name, self.VM.clickHandler)
 end
 
 -- 给一个view注入一个点击的事件

@@ -52,7 +52,7 @@ function app.ctor()
     app.S = require("core.Signal")
 
     app.V = require("core.BaseView")
-    app.C = require("core.BaseController")
+    app.VM = require("core.BaseViewModel")
     app.M = require("core.BaseModel")
     app.D = require("core.BaseEntity")
     app.PP = require("core.BasePopup")
