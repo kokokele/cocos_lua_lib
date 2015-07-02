@@ -6,14 +6,13 @@ local BaseView = class("BaseView", cc.Node)
 
 function BaseView:ctor()
     --NodeEx.lua
-    --print("BaseView.ctor()")
+    -- print("BaseView.ctor()")
+    self:enableNodeEvents()
 end
 
-function BaseView:initVM(ViewModelClass)
-    self:enableNodeEvents()
-    self.VM = ViewModelClass.new(self)
-    self.VM:init()
-
+function BaseView:setVM(viewModel)
+    self.VM = viewModel
+    self:init()
     return self
 end
 
@@ -22,7 +21,7 @@ function BaseView:init()
 end
 
 
-function BaseView:start()
+function BaseView:show()
     display:getRunningScene():push(self)
     return self
 end
@@ -178,6 +177,7 @@ end
 
 
 function BaseView:onEnter()
+    self.VM:onExit()
 end
 
 function BaseView:onExit()

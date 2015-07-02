@@ -1,5 +1,5 @@
 --[[
-  
+
     usage:
 
         local Hero = class("Hero", app.D)
@@ -14,6 +14,11 @@
 ]]
 
 local BaseEntity = class("BaseEntity", require("core.Observer"))
+
+function BaseEntity:addObserver(name, fun)
+    if self[name .. "_"] then fun(self[name .. "_"]:get(), self[name .. "_"]:get()) end
+    return BaseEntity.super.addObserver(self, name, fun)
+end
 
 --[[
     增加一个属性, 每个属性都是一个表, 具有名字与值, 还有get/set/willSet/didSet函数
@@ -57,7 +62,7 @@ function BaseEntity:setproperty(property)
             return self.value
         end
     end
-    
+
     property.eq = function(self, value)
         return self.value == value
     end
@@ -90,7 +95,9 @@ function BaseEntity:setproperty(property)
                 end
 
                 -- 触发观察者
-               self:fire(t.mt.name, v)
+                if v ~= oldvalue then
+                    self:fire(t.mt.name, v, oldvalue)
+                end
 
             elseif k == "didSet" or k == "willSet" then
                 rawset(t, k, v)
