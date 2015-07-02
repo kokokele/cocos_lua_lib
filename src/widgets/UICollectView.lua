@@ -103,6 +103,8 @@ function UICollectView:ctor(params)
     tableView:registerScriptHandler(cellSizeForTable,cc.TABLECELL_SIZE_FOR_INDEX)
     tableView:registerScriptHandler(tableCellAtIndex,cc.TABLECELL_SIZE_AT_INDEX)
     tableView:registerScriptHandler(tableCellTouched, cc.TABLECELL_TOUCHED)
+    tableView:setDelegate()
+
     tableView:reloadData()
 
     self.tableView = tableView
