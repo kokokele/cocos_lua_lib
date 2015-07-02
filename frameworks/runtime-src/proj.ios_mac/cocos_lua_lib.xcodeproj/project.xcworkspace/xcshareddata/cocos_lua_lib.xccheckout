@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>08043CAF-F45C-40D6-B324-8B0064FD0E5B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>cocos_lua_lib</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>87684411BA6696D5196173922956B2FA74F60149</key>
@@ -16,13 +16,13 @@
 		<string>git.oschina.net:kokokele/newGods.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>frameworks/runtime-src/proj.ios_mac/cocos_lua_lib.xcodeproj</string>
+	<string>frameworks/runtime-src/proj.ios_mac/cocos_lua_lib.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>87684411BA6696D5196173922956B2FA74F60149</key>
 		<string>../../../../..</string>
 		<key>BC3652298C763DEDDC57941E4D5E5C993C7DE949</key>
-		<string>../../../../..codes</string>
+		<string>../../../../..codes/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/kokokele/cocos_lua_lib.git</string>
@@ -46,7 +46,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>BC3652298C763DEDDC57941E4D5E5C993C7DE949</string>
 			<key>IDESourceControlWCCName</key>
-			<string>cocos_lua_libcodes</string>
+			<string>codes</string>
 		</dict>
 	</array>
 </dict>
