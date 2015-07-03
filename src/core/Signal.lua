@@ -4,26 +4,25 @@
 --
 
 
-local Singal = class("Singal")
+local Signal = class("Signal")
 
+function Signal:ctor()
+    self._pool = {}
+end
 
-Singal._pool = {}
-
-function Singal:add(fun)
-
+function Signal:add(fun)
     assert(type(fun) == "function", "BaseEntity:addObserver(): 参数fun必须为function")
-
     table.insert(self._pool, {["fun"] = fun, ["once"] = 0})
 end
 
 -- 只执行一次x
-function Singal:addOnce(fun)
+function Signal:addOnce(fun)
 
 	assert(type(fun) == "function", "BaseEntity:addObserver(): 参数fun必须为function")
 	table.insert(self._pool, {["fun"] = fun, ["once"] = 1})
 end
 
-function Singal:fire(...)
+function Signal:fire(...)
      if #self._pool  > 0 then
         for i, obj in ipairs(self._pool) do
             obj.fun(...)
@@ -34,7 +33,7 @@ function Singal:fire(...)
     end
 end
 
-function Singal:remove(handler)
+function Signal:remove(handler)
 
     for i,v in ipairs(self._pool) do
       if v == handler then
@@ -46,8 +45,8 @@ end
 
 
 
-function Singal:clearAll(name)
+function Signal:clearAll()
   self._pool = {}
 end
 
-return Singal
+return Signal

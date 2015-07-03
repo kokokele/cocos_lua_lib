@@ -2,27 +2,56 @@
 类似相册展示的容器
 ]]
 
-local CellList = class("CellList", cc.TableViewCell)
+local CellList = class("CellList", app.V, cc.TableViewCell)
 
-function CellList:ctor (cellClass, size,  cellWidth, gap)
-    print("CellList:", cellClass, size, gap)
+function CellList:ctor (cellClass, size,  cellWidth, cellHeight, gap)
+
+    CellList.super.ctor(self)
+
+    self.clickSignal = app.S.new()
     self.size = size
     for i=1, size do
         local cell = cellClass.new()
-        self:addChild(cell)
-        cell:setTag(i)
-        cell:setPositionX((i- 1) * cellWidth + gap)
+
+        panel = ccui.Layout:create()
+        panel.idx = size * self:getIdx() + i
+        panel:addChild(cell)
+        cell:setTag(1)
+        self:addChild(panel)
+        panel.index = i
+        panel:setContentSize(cc.size(cellWidth, 200))
+        panel:setTouchEnabled(true)
+        panel:setSwallowTouches(false)
+        panel:addTouchEventListener(function(sender, eventType)
+
+            if eventType == ccui.TouchEventType.ended then
+
+                self.index = self:getIdx() * size + sender.index
+                self.clickSignal:fire(self.index)
+            end
+        end)
+        panel:setTag(i)
+        panel:setPositionX((i- 1) * cellWidth + gap)
     end
 end
 
+function CellList:getIndex()
+    return self.index
+end
+
 function CellList:render(data)
-    for i=1, self.size  do
-        local cell = self:getChildByTag(i)
+    for i = 1, self.size  do
+        local p = self:getChildByTag(i)
+        local cell = p:getChildByTag(1)
         if data[i] then
             cell:render(data[i])
             cell:setVisible(true)
         else cell:setVisible(false) end
     end
+end
+
+function CellList:onExit ()
+    self.clickSignal:clearAll()
 end
 
 
@@ -43,6 +72,7 @@ self.collect = app.widgets.UICollectView.new({
     ["size"] = 4, --一排几个间距
     ["gap"] = 20, -- 每个cell的间距
     ["cellClass"] = app.goods.GoodsCell
+    ["onCellClicked"] = function(tableView, cell) end
 })
 ]]
 function UICollectView:ctor(params)
@@ -64,8 +94,14 @@ function UICollectView:ctor(params)
     local function tableCellAtIndex(tableView, idx)
         local cell = tableView:dequeueCell()
         if nil == cell then
-            cell = CellList.new(params.cellClass, params.size, params.cellWidth ,params.gap)
+            cell = CellList.new(params.cellClass, params.size, params.cellWidth, params.cellHeight ,params.gap)
         end
+
+        cell.clickSignal:add(function  (idx)
+            if params.onCellClicked then
+                params.onCellClicked(tableView, cell)
+            end
+        end)
 
         local data = {}
         local start = idx * params.size + 1
@@ -93,7 +129,6 @@ function UICollectView:ctor(params)
     end
 
     local function tableCellTouched(tableView, cell)
-        print("tableCellTouched:", tableView, cell)
         if params.onCellClicked then
             params.onCellClicked(tableView, cell)
         end
@@ -102,12 +137,16 @@ function UICollectView:ctor(params)
     tableView:registerScriptHandler(numberOfCellsInTableView,cc.NUMBER_OF_CELLS_IN_TABLEVIEW)
     tableView:registerScriptHandler(cellSizeForTable,cc.TABLECELL_SIZE_FOR_INDEX)
     tableView:registerScriptHandler(tableCellAtIndex,cc.TABLECELL_SIZE_AT_INDEX)
-    tableView:registerScriptHandler(tableCellTouched, cc.TABLECELL_TOUCHED)
-    tableView:setDelegate()
+    --tableView:registerScriptHandler(tableCellTouched, cc.TABLECELL_TOUCHED)
+    --tableView:setDelegate()
 
     tableView:reloadData()
 
     self.tableView = tableView
+
+end
+
+function UICollectView:onExit()
 
 end
 

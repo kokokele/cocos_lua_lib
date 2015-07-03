@@ -9,7 +9,10 @@
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
-        <ActiveDocument />
+        <OpenedDocuments>
+          <FilePathData Path="csd/theme_1/PopupSkin.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="csd/theme_1/PopupSkin.csd" />
       </Value>
     </Item>
     <Item Key="PackageParamsKey">

@@ -18,13 +18,13 @@ function BaseIcon:ctor()
     self:InjectView("frame")
 end
 
-function BaseIcon:render(url, clickHandler)
+function BaseIcon:render(url, eventHandler)
 
     self.icon:loadTexture(url, ccui.TextureResType.plistType)
 
-    if clickHandler then
+    if eventHandler then
         self:OnClick(self.icon, function(sender, touchPos)
-            clickHandler(self, touchPos)
+            eventHandler(self, touchPos)
         end,
 
         function(sender, eventType)
