@@ -147,7 +147,7 @@ end
 
 function BaseView:click(name)
     self:OnClick(name, function()
-        self.VM:clickHandler(name)
+        self.VM:eventHandler(name)
     end)
 end
 

@@ -15,8 +15,8 @@ function BaseViewModel:init()
 end
 
 -- 需要子类实现
-function BaseViewModel:clickHandler(name)
-    assert(false, "BaseViewModel:clickHandler需要子类实现")
+function BaseViewModel:eventHandler(name)
+    assert(false, "BaseViewModel:eventHandler需要子类实现")
 end
 
 -- 子类实现
