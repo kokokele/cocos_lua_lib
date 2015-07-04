@@ -177,10 +177,11 @@ end
 
 
 function BaseView:onEnter()
-    if self.VM then self.VM:onExit() end
+
 end
 
 function BaseView:onExit()
+    if self.VM then self.VM:onExit() end
 end
 
 return BaseView

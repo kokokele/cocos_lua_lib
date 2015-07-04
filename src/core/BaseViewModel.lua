@@ -5,10 +5,12 @@
 
 local BaseViewModel =  class("BaseViewModel")
 
-function BaseViewModel:ctor (viewClass)
+function BaseViewModel:ctor ()
+end
+
+function BaseViewModel:initView (viewClass)
     self.V = viewClass.new()
     self.V:setVM(self)
-    self:init()
 end
 
 function BaseViewModel:init()

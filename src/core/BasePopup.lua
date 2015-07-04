@@ -6,27 +6,50 @@ zp
 
 local BasePopup = class("BasePopup", app.V)
 
-BasePopup.style  = {
-    ["skin"] = "",
-    ["bgOpacity"] = 160,
-    ["width"] = 0,
-    ["height"] = 0,
-    ["gap"] = 0,
-    ["baseSkin"] = app.config.Theme .. ".PopupSkin"
-}
+local defaultStyle = class("defaultStyle")
+
 
 function BasePopup:ctor()
-    assert(#self.style.skin > 0, "需要Popup需要皮肤文件")
+    self.defaultStyle = {
+        ["skin"] = "",
+        ["bgOpacity"] = 160,
+        ["width"] = 0,
+        ["height"] = 0,
+        ["gap"] = 0,
+        ["baseSkin"] = app.config.Theme .. ".PopupSkin"
+    }
 
-    self.baseSkin = self:addCSB(self.style.baseSkin)
+    if self.style then
+        if self.style.skin then self.defaultStyle.skin = self.style.skin end
+        if self.style.bgOpacity then self.defaultStyle.bgOpacity = self.style.bgOpacity end
+        if self.style.width then self.defaultStyle.width = self.style.width end
+        if self.style.height then self.defaultStyle.height = self.style.height end
+    end
+
+    assert(#self.defaultStyle.skin > 0, "需要Popup需要皮肤文件")
+
+    self:render()
+end
+
+function BasePopup:render ()
+    -- self._layout = ccui.Layout:create()
+    -- self._layout:setContentSize(cc.size(display.width, display.height))
+    -- self._layout:setBackGroundColor(cc.c3b(0, 0, 0))    -- 填充颜色
+    -- self._layout:setBackGroundColorType(1)              -- 填充方式
+    -- self._layout:setBackGroundColorOpacity(190)         -- 颜色透明度
+    -- self._layout:setTouchEnabled(true)
+    -- self:addChild(self._layout, -1)
+
+
+    self.baseSkin = self:addCSB(self.defaultStyle.baseSkin)
     self:InjectView("Bg")
     self:InjectView("Button_Close", "close")
 
     assert(self.Bg, "popupSkin: Bg不存在")
 
-    local w = self.style.width
-    local h = self.style.height
-    local gap = self.style.gap
+    local w = self.defaultStyle.width
+    local h = self.defaultStyle.height
+    local gap = self.defaultStyle.gap
 
     -- center
     local cx = (display.width - w) / 2
@@ -45,10 +68,10 @@ function BasePopup:ctor()
         end)
     end
 
-    self.skin = self:addCSB(self.style.skin, self.Bg)
+    self.skin = self:addCSB(self.defaultStyle.skin, self.Bg)
 
-    if w == 0 then self.style.width = self.skin:getContentSize().width end
-    if h == 0 then self.style.height = self.skin:getContentSize().height end
+    if w == 0 then self.defaultStyle.width = self.skin:getContentSize().width end
+    if h == 0 then self.defaultStyle.height = self.skin:getContentSize().height end
 
     self.Bg:setContentSize(w + gap * 2, h + gap * 2)
     self.Bg:move((display.width - w) / 2, (display.height - h) / 2)
@@ -67,8 +90,11 @@ function BasePopup:show()
     layout:setContentSize(display.size)
     layout:setBackGroundColor(cc.c3b(0, 0, 0))    -- 填充颜色
     layout:setBackGroundColorType(1)              -- 填充方式
-    layout:setBackGroundColorOpacity(self.style.bgOpacity)         -- 颜色透明度
+    layout:setBackGroundColorOpacity(self.defaultStyle.bgOpacity)         -- 颜色透明度
     layout:setTouchEnabled(true)
+
+    self:addChild(layout, -1)
+
 
 
     self:showAction()
