@@ -11,9 +11,12 @@ function BaseScene:ctor()
     self._popupContainer:setLocalZOrder(10)
     self._popupContainer:addTo(self)
 
+    self._loading = app.Loading.new()
+    self._loading:setLocalZOrder(20)
+    self._loading:addTo(self)
 
     self._toast = cc.Node:create()
-    self._toast:setLocalZOrder(20)
+    self._toast:setLocalZOrder(30)
     self._toast:addTo(self)
 
 
@@ -32,6 +35,10 @@ end
 
 function BaseScene:getToastContainer()
     return self._toast
+end
+
+function BaseScene:getLoading()
+    return self._loading
 end
 
 function BaseScene:push(layer)

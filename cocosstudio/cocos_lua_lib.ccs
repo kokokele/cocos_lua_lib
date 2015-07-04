@@ -88,6 +88,7 @@
             <Project Name="PopupSkin.csd" Type="Node" />
             <Project Name="ToastSkin.csd" Type="Node" />
             <Project Name="IconSkin.csd" Type="Node" />
+            <Project Name="LoadingSkin.csd" Type="Node" />
           </Folder>
         </Folder>
       </RootFolder>

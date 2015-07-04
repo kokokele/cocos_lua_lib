@@ -7,14 +7,6 @@
         <LastRunType Value="Unknown" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="csd/theme_1/PopupSkin.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="csd/theme_1/PopupSkin.csd" />
-      </Value>
-    </Item>
     <Item Key="PackageParamsKey">
       <Value ctype="PackageParams">
         <LuaIsEncrypt Value="False" />

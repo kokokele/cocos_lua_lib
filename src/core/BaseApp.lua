@@ -63,6 +63,7 @@ function app.ctor()
     app.Http = require("utils.http")
    	app.Date = require("utils.date")
     app.Json = require("utils.dkjson")
+    app.Loading = require("widgets.Loading")
 
 end
 

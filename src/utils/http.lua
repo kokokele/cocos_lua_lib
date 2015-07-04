@@ -26,6 +26,10 @@ end
 
 function Http:send(callback, isHideLoading)
 
+    if not isHideLoading then
+        app.Loading.on()
+    end
+
     if app.config.DEBUG then
         print("url: " .. self.request.url:toStr())
         print("params: " .. app.Json.encode(self.request.params))
@@ -40,7 +44,8 @@ function Http:send(callback, isHideLoading)
             print("返回数据： ", xhr.response)
         end
 
-
+        app.Loading.off()
+        
         if xhr.status == 200 then
 
             local jdata = app.Json.decode(xhr.response)
