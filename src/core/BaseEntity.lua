@@ -91,7 +91,7 @@ function BaseEntity:setproperty(property)
                 t.mt.value = v
                 -- 值改变了调用didSet
                 if t.didSet then
-                    t.didSet(t, oldvalue)
+                    t.didSet(t, v)
                 end
 
                 -- 触发观察者

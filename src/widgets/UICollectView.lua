@@ -22,13 +22,32 @@ function CellList:ctor (cellClass, size,  cellWidth, cellHeight, gap)
         panel:setContentSize(cc.size(cellWidth, 200))
         panel:setTouchEnabled(true)
         panel:setSwallowTouches(false)
+
+        local clicked
         panel:addTouchEventListener(function(sender, eventType)
 
-            if eventType == ccui.TouchEventType.ended then
+            if eventType == ccui.TouchEventType.began then
+                clicked = true
+            elseif eventType == ccui.TouchEventType.moved then
+                clicked = false
+                -- print("moved...")
 
-                self.index = self:getIdx() * size + sender.index
-                self.clickSignal:fire(self.index)
+            elseif eventType == ccui.TouchEventType.ended then
+                -- print("clicked:", clicked)
+                if clicked then
+                    self.index = self:getIdx() * size + sender.index
+                    self.clickSignal:fire(self.index, sender:getChildByTag(1))
+                end
+            elseif eventType == ccui.TouchEventType.canceled then
+                print("ccui.TouchEventType.canceled.")
+                clicked = false
             end
+
+            -- if  then
+            --
+            --     self.index = self:getIdx() * size + sender.index
+            --     self.clickSignal:fire(self.index, sender:getChildByTag(1))
+            -- end
         end)
         panel:setTag(i)
         panel:setPositionX((i- 1) * cellWidth + gap)
@@ -72,7 +91,7 @@ self.collect = app.widgets.UICollectView.new({
     ["size"] = 4, --一排几个间距
     ["gap"] = 20, -- 每个cell的间距
     ["cellClass"] = app.goods.GoodsCell
-    ["onCellClicked"] = function(tableView, cell) end
+    ["onCellClicked"] = function(idx, cell) end
 })
 ]]
 function UICollectView:ctor(params)
@@ -97,9 +116,9 @@ function UICollectView:ctor(params)
             cell = CellList.new(params.cellClass, params.size, params.cellWidth, params.cellHeight ,params.gap)
         end
 
-        cell.clickSignal:add(function  (idx)
+        cell.clickSignal:add(function  (idx, item)
             if params.onCellClicked then
-                params.onCellClicked(tableView, cell)
+                params.onCellClicked(idx, item)
             end
         end)
 
