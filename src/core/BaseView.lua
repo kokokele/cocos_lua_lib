@@ -26,6 +26,10 @@ function BaseView:show()
     return self
 end
 
+function BaseView:dismiss()
+    display:getRunningScene():pop()
+end
+
 
 function BaseView:addCSB(csbFile, parent)
     --local result =  require("csd." .. csbFile).create()
@@ -181,7 +185,7 @@ function BaseView:onEnter()
 end
 
 function BaseView:onExit()
-    if self.VM then self.VM:onExit() end
+    if self.VM  then self.VM:onExit() end
 end
 
 return BaseView

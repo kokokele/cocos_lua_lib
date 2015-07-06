@@ -22,7 +22,7 @@ function BaseViewModel:eventHandler(name)
 end
 
 -- 子类实现
-function onExit ()
+function BaseViewModel:onExit ()
 
 end
 
