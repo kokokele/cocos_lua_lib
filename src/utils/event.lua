@@ -27,6 +27,7 @@ end
 function Event.dispatch(name, usedata)
     local event = cc.EventCustom:new(name)
     event._usedata = usedata
+    event.data = usedata
     Event.Dispatcher:dispatchEvent(event)
 end
 

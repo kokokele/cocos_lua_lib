@@ -1,7 +1,7 @@
 --[[--
 打印UserData & table
 ]]
-qy.print_r = function(o, ret, indent)
+app.print_r = function(o, ret, indent)
     local r = ""
     local t = type(o)
 
@@ -29,9 +29,9 @@ qy.print_r = function(o, ret, indent)
     else r = r .. o
     end
 
-    if ret then return r else 
+    if ret then return r else
         print("------------------ [print_r] Start---------------------")
-        print(r) 
+        print(r)
         print("------------------ [print_r] End  ---------------------")
     end
 end
@@ -40,7 +40,7 @@ end
 Lua 格式化打印 table 函数
 use: http://www.laoxieit.com/coding/59.html
 ]]
-function qy.print_lua_table (lua_table)
+function app.print_lua_table (lua_table)
     indent = indent or 0
     for k, v in pairs(lua_table) do
         if type(k) == "string" then
