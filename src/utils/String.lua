@@ -52,7 +52,7 @@ function String.charAtUTF8(str,idx)
    		if char_len == idx then
     		startIndex = i
    			endIndex = i + String.getByteSize(byte) - 1
-   			return string.sub(str,startIndex,endIndex) 
+   			return string.sub(str,startIndex,endIndex)
    		end
    		i = i + String.getByteSize(byte)
     end
@@ -73,8 +73,8 @@ function String.substringUTF8(str,_startIndex,_endIndex)
 
    		i = i + String.getByteSizeUTF8(byte)
    		if char_len == _endIndex then
-   			endIndex = i - 1 
-   			return string.sub(str,startIndex,endIndex) 
+   			endIndex = i - 1
+   			return string.sub(str,startIndex,endIndex)
    		end
     end
 	return nil
@@ -96,7 +96,7 @@ function String.substrUTF8(str,_startIndex,_len)
    		i = i + String.getByteSize(byte)
    		if char_len - len == _len - 1 then
    			endIndex = i - 1
-   			return string.sub(str,startIndex,endIndex) 
+   			return string.sub(str,startIndex,endIndex)
    		end
     end
 	return "fuck"
@@ -106,24 +106,5 @@ function String.indexOfUTF8(str,vol,_startIndex)
 end
 
 -------------------------------------------------------
--- 参数:待分割的字符串,分割字符
--- 返回:子串表.(含有空串)
-function String.split(str, split_char)
-    local sub_str_tab = {}
-    while (true) do
-        local pos = string.find(str, split_char)
-        if (not pos) then
-            sub_str_tab[#sub_str_tab + 1] = str
-            break
-        end
-        local sub_str = string.sub(str, 1, pos - 1)
-        sub_str_tab[#sub_str_tab + 1] = sub_str
-        str = string.sub(str, pos + 1, #str)
-    end
-
-    return sub_str_tab;
-end
 
 return String
-
-

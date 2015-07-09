@@ -26,12 +26,6 @@ function Utils.oneToTwo(tables, num1, num2)
     return array
 end
 
-function Utils.keyof(hashtable, value)
-    for k, v in pairs(hashtable) do
-        if v == value then return k end
-    end
-    return nil
-end
 
 function Utils.slice(list, start, total)
 
@@ -46,17 +40,6 @@ function Utils.slice(list, start, total)
     return array
 end
 
--- 遍历表
-function Utils.foreach(t, callfunc)
-    if not t then return end
-    
-    if #t > 0 then
-        for i,v in ipairs(t) do
-            callfunc(v)
-        end
-    else
-        callfunc(t)
-    end
-end
+
 
 return Utils

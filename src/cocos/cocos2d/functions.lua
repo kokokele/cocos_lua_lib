@@ -681,6 +681,7 @@ function string.utf8len(input)
     return cnt
 end
 
+-- use: string.formatnumberthousands(1924235) 1,924,235
 function string.formatnumberthousands(num)
     local formatted = tostring(checknumber(num))
     local k
