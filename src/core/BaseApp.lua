@@ -65,6 +65,8 @@ function app.ctor()
     app.Json = require("utils.dkjson")
     app.Loading = require("widgets.Loading")
 
+    require "utils.functions"
+
 end
 
 

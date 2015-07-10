@@ -21,6 +21,7 @@ end
 
 -- 下一帧执行 方法
 function Timer.onFrameNext(func)
+    local director = cc.Director:getInstance()
     local delay = director:getAnimationInterval()
 
     Timer.createOnce(func, delay)
