@@ -10,6 +10,7 @@ end
 
 function BaseViewModel:initView (viewClass)
     self.V = viewClass.new()
+    self.V:retain()
     self.V:setVM(self)
 end
 
@@ -23,7 +24,7 @@ end
 
 -- 子类实现
 function BaseViewModel:onExit ()
-
+    self.V:release()
 end
 
 return BaseViewModel

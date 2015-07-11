@@ -12,7 +12,6 @@ end
 
 function BaseView:setVM(viewModel)
     self.VM = viewModel
-    self:init()
     return self
 end
 
@@ -22,6 +21,9 @@ end
 
 
 function BaseView:show()
+
+    self:init()
+
     display:getRunningScene():push(self)
     return self
 end
