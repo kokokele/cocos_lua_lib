@@ -32,8 +32,7 @@ end
 function Timer.createOnce (func, delay)
 
     local director = cc.Director:getInstance()
-    local interval = director:getAnimationInterval()
-
+    
     local timeHandler = nil
     timeHandler = director:getScheduler():scheduleScriptFunc(function()
             func()

@@ -83,7 +83,7 @@ function BasePopup:render ()
 end
 
 function BasePopup:show()
-
+    self:init()
     display:getRunningScene():getPopContainer():addChild(self)
 
     local layout = ccui.Layout:create()
