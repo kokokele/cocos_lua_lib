@@ -6,6 +6,14 @@ function ccui.Text:fixSize(size)
 end
 
 
+function ccui.TextField:fixSize(size)
+    self:ignoreContentAdaptWithSize(false)
+    self:setTextAreaSize(size)
+end
+
+
+
+
 -- 设置行高
 function ccui.Text:setLineHeight(lineHeight)
     self:getVirtualRenderer():setLineHeight(lineHeight)

@@ -278,37 +278,42 @@ static Purchase* s_instance = nil;
 //    [alerView release];
     
     
-    int id = [[dict objectForKey:@"id"] intValue];
+//    int id = [[dict objectForKey:@"id"] intValue];
     
-    NSString* productID;
-    switch (int(id)) {
-        case 1:
-            productID = IAP_GOLD_1;
-            break;
-        case 2:
-            productID = IAP_GOLD_2;
-            break;
-            
-        case 3:
-            productID = IAP_GOLD_3;
-            break;
-            
-        case 4:
-            productID = IAP_GOLD_4;
-            break;
-            
-        case 5:
-            productID = IAP_GOLD_5;
-            break;
-            
-        case 6:
-            productID = IAP_GOLD_6;
-            break;
-            
-        default:
-            productID = IAP_GOLD_1;
-            break;
-    }
+    NSLog(@"buy..........%@", dict);
+    
+    NSString* productID =   [dict objectForKey:@"id"] ;
+    
+    NSLog(@"product:%@", productID);
+//    
+//    switch (int(id)) {
+//        case 1:
+//            productID = IAP_GOLD_1;
+//            break;
+//        case 2:
+//            productID = IAP_GOLD_2;
+//            break;
+//            
+//        case 3:
+//            productID = IAP_GOLD_3;
+//            break;
+//            
+//        case 4:
+//            productID = IAP_GOLD_4;
+//            break;
+//            
+//        case 5:
+//            productID = IAP_GOLD_5;
+//            break;
+//            
+//        case 6:
+//            productID = IAP_GOLD_6;
+//            break;
+//            
+//        default:
+//            productID = IAP_GOLD_1;
+//            break;
+//    }
     
 //    SKProduct *prod = [[SKProduct alloc] initWithProductIdentifiers: [NSSet setWithObject:productID]];
 //    SKPayment *payment = [SKPayment paymentWithProduct:prod];
