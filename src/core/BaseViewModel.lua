@@ -11,18 +11,12 @@ end
 function BaseViewModel:initView (viewClass)
 
     self.viewClass = viewClass
-
-    -- self.V = viewClass.new()
-    -- self.V:retain()
-    -- self.V:setVM(self)
 end
 
 function BaseViewModel:showView ()
 
-    -- if not self.V then
-        self.V = self.viewClass.new()
-        self.V:setVM(self)
-    -- end
+    self.V = self.viewClass.new()
+    self.V:setVM(self)
 
     self.V:show()
 
