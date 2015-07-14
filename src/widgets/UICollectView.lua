@@ -4,14 +4,14 @@
 
 local CellList = class("CellList", app.V, cc.TableViewCell)
 
-function CellList:ctor (cellClass, size,  cellWidth, cellHeight, gap)
+function CellList:ctor (cell, size,  cellWidth, cellHeight, gap)
 
     CellList.super.ctor(self)
 
     self.clickSignal = app.S.new()
     self.size = size
     for i=1, size do
-        local cell = cellClass.new()
+        local cell = cell()
 
         panel = ccui.Layout:create()
         panel.idx = size * self:getIdx() + i
@@ -113,7 +113,7 @@ function UICollectView:ctor(params)
     local function tableCellAtIndex(tableView, idx)
         local cell = tableView:dequeueCell()
         if nil == cell then
-            cell = CellList.new(params.cellClass, params.size, params.cellWidth, params.cellHeight ,params.gap)
+            cell = CellList.new(params.cell, params.size, params.cellWidth, params.cellHeight ,params.gap)
         end
 
         cell.clickSignal:add(function  (idx, item)
