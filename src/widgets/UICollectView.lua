@@ -90,7 +90,7 @@ self.collect = app.widgets.UICollectView.new({
     ["data"] = data,
     ["size"] = 4, --一排几个间距
     ["gap"] = 20, -- 每个cell的间距
-    ["cellClass"] = app.goods.GoodsCell
+    ["cell"] = function return app.goods.GoodsCell.new() end,
     ["onCellClicked"] = function(idx, cell) end
 })
 ]]
