@@ -10,6 +10,8 @@ local defaultStyle = class("defaultStyle")
 
 
 function BasePopup:ctor()
+    BasePopup.super.ctor(self)
+
     self.defaultStyle = {
         ["skin"] = "",
         ["bgOpacity"] = 160,
