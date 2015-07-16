@@ -4,4 +4,5 @@ res/assets
 res/Default
 res/assets_lib
 
-frameworks/runtime-src/proj.ios_mac
+
+frameworks/runtime-src/proj.ios_mac/ios
