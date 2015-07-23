@@ -21,24 +21,31 @@ end
 
 -- 下一帧执行 方法
 function Timer.onFrameNext(func)
+
     local director = cc.Director:getInstance()
     local delay = director:getAnimationInterval()
 
-    Timer.createOnce(func, delay)
-
+    return Timer.createOnce(func, delay)
 end
 
 
 function Timer.createOnce (func, delay)
 
     local director = cc.Director:getInstance()
-    
+
     local timeHandler = nil
     timeHandler = director:getScheduler():scheduleScriptFunc(function()
             func()
             director:getScheduler():unscheduleScriptEntry(timeHandler)
 
         end, delay, false)
+
+    return timeHandler
+end
+
+function Timer.clearImmediately(timerHander)
+    local director = cc.Director:getInstance()
+    director:getScheduler():unscheduleScriptEntry(timeHandler)
 end
 
 return Timer
