@@ -57,6 +57,8 @@ function app.ctor()
     app.M = require("core.BaseModel")
     app.PP = require("core.BasePopup")
 
+    app.ViewCenter = require("core.ViewCenter")
+
     app.Toast = require("widgets.Toast")
     app.Timer = require("utils.timer")
     app.Event = require("utils.event")
