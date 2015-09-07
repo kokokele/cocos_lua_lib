@@ -1,15 +1,10 @@
-<UserData>
+<UserData Version="2.3.1.2">
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Unknown" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <ActiveDocument />
       </Value>
     </Item>
     <Item Key="PackageParamsKey">
@@ -23,6 +18,7 @@
         <iOS_Target Value="cocos_lua_lib iOS" />
         <iOS_BundleID Value="iPhone Developer: Xuan you (753X3AMMYQ)" />
         <Platform Value="None" />
+        <RunPlatform Value="None" />
         <FrameworkVersion Value="cocos2d-x-3.6" />
         <IsDebugKeystore Value="True" />
         <KeystorePassword Value="" />

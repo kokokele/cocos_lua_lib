@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Layer" Name="MainLayer" ID="40affed8-4625-4c97-9502-c60f76b22fc6" Version="2.3.0.1" />
+  <PropertyGroup Type="Layer" Name="MainLayer" ID="40affed8-4625-4c97-9502-c60f76b22fc6" Version="2.3.1.2" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -13,7 +13,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4867" Y="0.7683" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
             <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
             <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
@@ -27,7 +27,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7767" Y="0.7717" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
             <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
             <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
@@ -41,7 +41,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7833" Y="0.5717" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
             <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
             <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
@@ -55,7 +55,7 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.7800" Y="0.3583" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
             <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
             <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
@@ -69,21 +69,21 @@
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4933" Y="0.5717" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <NormalBackFileData Type="Default" Path="Default/CheckBox_Normal.png" Plist="" />
             <PressedBackFileData Type="Default" Path="Default/CheckBox_Press.png" Plist="" />
             <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
             <NodeNormalFileData Type="Default" Path="Default/CheckBoxNode_Normal.png" Plist="" />
             <NodeDisableFileData Type="Default" Path="Default/CheckBoxNode_Disable.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Button_1_0" ActionTag="-192033000" Tag="37" IconVisible="False" LeftMargin="124.0000" RightMargin="130.0000" TopMargin="208.0000" BottomMargin="56.0000" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" OutlineSize="0" ShadowOffsetX="0" ShadowOffsetY="0" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_1_0" ActionTag="-192033000" Tag="37" IconVisible="False" LeftMargin="124.0000" RightMargin="130.0000" TopMargin="208.0000" BottomMargin="56.0000" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" OutlineSize="0" ShadowOffsetX="0.0000" ShadowOffsetY="0.0000" ctype="ButtonObjectData">
             <Size X="46.0000" Y="36.0000" />
             <AnchorPoint />
             <Position X="124.0000" Y="56.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4133" Y="0.1867" />
-            <PreSize />
+            <PreSize X="0.0000" Y="0.0000" />
             <TextColor A="255" R="65" G="65" B="70" />
             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
             <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />

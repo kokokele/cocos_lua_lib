@@ -4,7 +4,7 @@
 -- All changes will be lost.
 --------------------------------------------------------------
 
-local luaExtend = require "LuaExtend.lua"
+local luaExtend = require "LuaExtend"
 
 -- using for layout to decrease count of local variables
 local layout = nil

@@ -4,7 +4,7 @@
 -- All changes will be lost.
 --------------------------------------------------------------
 
-local luaExtend = require "LuaExtend.lua"
+local luaExtend = require "LuaExtend"
 
 -- using for layout to decrease count of local variables
 local layout = nil
@@ -143,6 +143,43 @@ layout:setBottomMargin(349.5)
 layout:setStretchWidthEnabled(false)
 layout:setStretchHeightEnabled(false)
 Node:addChild(Button_Close)
+
+--Create Container
+local Container=cc.Node:create()
+Container:setName("Container")
+Container:setLocalZOrder(0)
+Container:setTag(4)
+Container:setCascadeColorEnabled(true)
+Container:setCascadeOpacityEnabled(true)
+Container:setVisible(true)
+Container:setAnchorPoint(0, 0)
+Container:setPosition(11, 13)
+Container:setScaleX(1)
+Container:setScaleY(1)
+Container:setRotation(0)
+Container:setRotationSkewX(0)
+Container:setRotationSkewY(0)
+Container:setOpacity(255)
+Container:setColor(cc.c3b(255, 255, 255))
+layout = ccui.LayoutComponent:bindLayoutComponent(Container)
+layout:setPositionPercentXEnabled(false)
+layout:setPositionPercentYEnabled(false)
+layout:setPositionPercentX(0)
+layout:setPositionPercentY(0)
+layout:setPercentWidthEnabled(false)
+layout:setPercentHeightEnabled(false)
+layout:setPercentWidth(0)
+layout:setPercentHeight(0)
+
+layout:setSize(cc.size(0, 0))
+
+layout:setHorizontalEdge(0)
+layout:setVerticalEdge(0)
+layout:setLeftMargin(11)
+layout:setRightMargin(-11)
+layout:setTopMargin(-13)
+layout:setBottomMargin(13)
+Node:addChild(Container)
 
 --Create Animation
 result['animation'] = ccs.ActionTimeline:create()

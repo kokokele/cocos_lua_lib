@@ -4,7 +4,7 @@
 -- All changes will be lost.
 --------------------------------------------------------------
 
-local luaExtend = require "LuaExtend.lua"
+local luaExtend = require "LuaExtend"
 
 -- using for layout to decrease count of local variables
 local layout = nil
@@ -141,6 +141,8 @@ Node:addChild(Img_frame)
 
 --Create Text_title
 local Text_title = ccui.Text:create()
+Text_title:ignoreContentAdaptWithSize(true)
+Text_title:setTextAreaSize(cc.size(0, 0))
 Text_title:setFontSize(20)
 Text_title:setString([[哈哈]])
 Text_title:setTextHorizontalAlignment(1)

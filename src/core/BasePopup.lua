@@ -45,6 +45,7 @@ function BasePopup:render ()
 
     self.baseSkin = self:addCSB(self.defaultStyle.baseSkin)
     self:InjectView("Bg")
+    self:InjectView("Container")
     self:InjectView("Button_Close", "close")
 
     assert(self.Bg, "popupSkin: Bg不存在")
@@ -70,7 +71,7 @@ function BasePopup:render ()
         end)
     end
 
-    self.skin = self:addCSB(self.defaultStyle.skin, self.Bg)
+    self.skin = self:addCSB(self.defaultStyle.skin, self.Container)
 
     if w == 0 then self.defaultStyle.width = self.skin:getContentSize().width end
     if h == 0 then self.defaultStyle.height = self.skin:getContentSize().height end
